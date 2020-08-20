@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>BeClair</title>
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<script src="./js/jquery.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="./js/bootstrap.js"></script>
+	<link rel="stylesheet" href="./css/master.css">
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="./js/engine.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- Sidebar  -->
+		<nav id="sidebar" class="navbar-dark bg-dark shadow-sm">
+			<div class="sidebar-header">
+				<h3>Backboneoflife</h3>
+			</div>
+			<ul class="list-unstyled components">
+				<p>Dummy Heading</p>
+				<li class="active"> <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+					<ul class="collapse list-unstyled" id="homeSubmenu">
+						<li> <a href="#">Home 1</a>
+						</li>
+						<li> <a href="#">Home 2</a>
+						</li>
+						<li> <a href="#">Home 3</a>
+						</li>
+					</ul>
+				</li>
+				<li> <a href="#">About</a>
+				</li>
+				<li> <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+					<ul class="collapse list-unstyled" id="pageSubmenu">
+						<li> <a href="#">Page 1</a>
+						</li>
+						<li> <a href="#">Page 2</a>
+						</li>
+						<li> <a href="#">Page 3</a>
+						</li>
+					</ul>
+				</li>
+				<li> <a href="#">Portfolio</a>
+				</li>
+				<li> <a href="#">Contact</a>
+				</li>
+			</ul>
+			<ul class="list-unstyled CTAs">
+				<li> <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+				</li>
+				<li> <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- Page Content  -->
+		<div id="content">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+					<button type="button" id="sidebarCollapse" class="btn btn-secondary"> <i class="fas fa-align-left"></i>
+						<span>Menu</span>
+					</button>
+					<button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="fas fa-align-justify"></i>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="nav navbar-nav ml-auto">
+							<li class="nav-item"> <a class="nav-link" href="#">Login</a>
+							</li>
+							<li class="nav-item"> <a class="nav-link" href="#">Register</a>
+							</li>
+							<li class="nav-item"> <a class="nav-link" href="#">Profiles</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div id="ChatSystem" class="card text-center fixed-bottom">
+				<div id="ChatTitles" class="card-header">
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="btn-group dropup float-left">
+                <button id="LinkHide"  type="button" class="btn btn-secondary">Chat</button>
+								<!-- <button type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Size</button>
+								<div class="dropdown-menu">
+									<a id="Link25" class="dropdown-item" href="#Size25">25%</a>
+									<a id="Link50" class="dropdown-item" href="#Size50">50%</a>
+									<a id="Link100" class="dropdown-item" href="#Size100">100%</a>
+								</div>-->
+							</div>
+						</div>
+						<div class="col-sm-6">
+
+						</div>
+					</div>
+				</div>
+				<div class="collapse" id="chatGroups">
+					<div class="card card-body chatHolder">
+
+						<div class="row chatHolder">
+							<div class="col-sm-3">
+
+								<div class="list-group">
+									<p class="list-group-item">Chat groups</p>
+								  <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
+								  <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
+								  <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac</button>
+								</div>
+
+							</div>
+							<div class="col">
+								<div id="MessageCollection" >
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="input-group fixed-bottom">
+					  <input id="TxtMsg" type="text" class="form-control">
+					  <div class="input-group-append">
+					    <button id="BtnSend" type="button" class="btn btn-secondary">Send</button>
+					  </div>
+					</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

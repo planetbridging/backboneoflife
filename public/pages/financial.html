@@ -1,0 +1,60 @@
+<div class="accordion" id="financialContent">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Choose Files
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#financialContent">
+      <div class="card-body">
+        <h1>
+          Select files
+        </h1>
+        <input type="file" id="file-selector" multiple/>
+        <ul id="output"></ul>
+
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Search Terms
+        </button>
+        <button id="BtnFinancialUpdate" type="button" class="btn btn-secondary">Update</button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#financialContent">
+      <div class="card-body">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Enter</span>
+          </div>
+          <textarea id="TxtSearchTerms" class="form-control" aria-label="With textarea"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Results
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#financialContent">
+      <div class="card-body">
+        <h1>Total</h1>
+        <div id="chartTotal" style="height: 300px; width: 100%;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./js/canvasjs.min.js"></script>
+<script src="./js/financial.js"></script>

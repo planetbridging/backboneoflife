@@ -46,6 +46,11 @@ $(document).ready(function () {
       $("#TxtMsg").val("");
     });
 
+    $("#BtnFinancial").click(function(){
+      $( "#dynamicContent" ).load( "./pages/financial.html" );
+    });
+
+
     //show/hide chatGroups
     /*$('#Link25').click( function(e) { Set_Chat_Group_Height(0.25);$("#chatGroups").height(chatGroupHeight).collapse('show');} );
     $('#Link50').click( function(e) { Set_Chat_Group_Height(0.5);  $("#chatGroups").height(chatGroupHeight).collapse('show');} );
